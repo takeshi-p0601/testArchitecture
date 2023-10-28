@@ -36,6 +36,7 @@
 		FB72571D2AECE1C500BADCFE /* NameProcessMemoryCommanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72571C2AECE1C500BADCFE /* NameProcessMemoryCommanderTests.swift */; };
 		FB7257202AECF51700BADCFE /* MockPostLoginAPICommander.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72571F2AECF51700BADCFE /* MockPostLoginAPICommander.swift */; };
 		FB7257222AECFEA400BADCFE /* MockLoggedInUserDefaultsCommander.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7257212AECFEA400BADCFE /* MockLoggedInUserDefaultsCommander.swift */; };
+		FB7257242AED056400BADCFE /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7257232AED056400BADCFE /* MockAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		FB72571C2AECE1C500BADCFE /* NameProcessMemoryCommanderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameProcessMemoryCommanderTests.swift; sourceTree = "<group>"; };
 		FB72571F2AECF51700BADCFE /* MockPostLoginAPICommander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostLoginAPICommander.swift; sourceTree = "<group>"; };
 		FB7257212AECFEA400BADCFE /* MockLoggedInUserDefaultsCommander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoggedInUserDefaultsCommander.swift; sourceTree = "<group>"; };
+		FB7257232AED056400BADCFE /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +333,7 @@
 		FB72571E2AECF50500BADCFE /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				FB7257232AED056400BADCFE /* MockAPIClient.swift */,
 				FB72571F2AECF51700BADCFE /* MockPostLoginAPICommander.swift */,
 				FB7257212AECFEA400BADCFE /* MockLoggedInUserDefaultsCommander.swift */,
 			);
@@ -499,6 +502,7 @@
 				FB7257222AECFEA400BADCFE /* MockLoggedInUserDefaultsCommander.swift in Sources */,
 				FB7257202AECF51700BADCFE /* MockPostLoginAPICommander.swift in Sources */,
 				FB7256FB2AECB1A400BADCFE /* PostLoginAPICommanderTests.swift in Sources */,
+				FB7257242AED056400BADCFE /* MockAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
