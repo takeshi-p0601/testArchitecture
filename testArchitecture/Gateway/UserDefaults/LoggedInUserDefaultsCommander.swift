@@ -13,7 +13,11 @@ protocol LoggedInUserDefaultsCommandable {
 }
 
 struct LoggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable {
-    var client: UserDefaultsClientable
+    let client: UserDefaultsClientable
+    
+    init(client: UserDefaultsClientable) {
+        self.client = client
+    }
     
     func getCommand() -> Bool? {
         if let loggedIn = self.client.getValue(key: .loggedIn) as? Bool {

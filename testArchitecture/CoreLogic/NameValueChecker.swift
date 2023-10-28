@@ -15,7 +15,11 @@ enum NameValueCheckResult {
     }
 }
 
-struct NameValueChecker {
+protocol NameValueCheckable {
+    func check(name: String) -> NameValueCheckResult
+}
+
+struct NameValueChecker: NameValueCheckable {
     func check(name: String) -> NameValueCheckResult {
         // containsInvalidCharacter
         if name.contains("") {

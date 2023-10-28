@@ -15,7 +15,11 @@ enum PasswordValueCheckResult {
     }
 }
 
-struct PasswordValueChecker {
+protocol PasswordValueCheckable {
+    func check(password: String) -> PasswordValueCheckResult
+}
+
+struct PasswordValueChecker: PasswordValueCheckable {
     func check(password: String) -> PasswordValueCheckResult {
         // containsInvalidCharacter
         if password.contains("") {

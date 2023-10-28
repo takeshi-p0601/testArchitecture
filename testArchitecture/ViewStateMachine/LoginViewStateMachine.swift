@@ -35,8 +35,8 @@ protocol LoginViewStateMachineable: ObservableObject {
     var state: LoginViewState { get }
     var action: PassthroughSubject<LoginViewAction, Never> { get }
     // corelogic actor
-    var nameValueChecker: NameValueChecker { get }
-    var passwordValueChecker: PasswordValueChecker { get }
+    var nameValueChecker: NameValueCheckable { get }
+    var passwordValueChecker: PasswordValueCheckable { get }
     // gateway commander
     var postLoginAPICommander: PostLoginAPICommandable { get }
     var loggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable { get }
@@ -45,8 +45,8 @@ protocol LoginViewStateMachineable: ObservableObject {
 class LoginViewStateMachine: ObservableObject, LoginViewStateMachineable {
     var state: LoginViewState { _state }
     let action = PassthroughSubject<LoginViewAction, Never>()
-    let nameValueChecker: NameValueChecker
-    let passwordValueChecker: PasswordValueChecker
+    let nameValueChecker: NameValueCheckable
+    let passwordValueChecker: PasswordValueCheckable
     let postLoginAPICommander: PostLoginAPICommandable
     let loggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable
     

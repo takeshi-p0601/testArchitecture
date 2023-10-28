@@ -13,7 +13,7 @@ protocol PostLoginAPICommandable {
 struct PostLoginRequest: APIRequestProtocol {
     typealias Response = PostLoginAPIResponse
     
-    var httpMethod: String { "get" }
+    var httpMethod: String { "post" }
     var endpoint: String { "/login" }
     var requestBodies: [String : Any]?
     var queryStrings: [String : String]?
