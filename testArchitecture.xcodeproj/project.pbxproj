@@ -37,6 +37,8 @@
 		FB7257202AECF51700BADCFE /* MockPostLoginAPICommander.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72571F2AECF51700BADCFE /* MockPostLoginAPICommander.swift */; };
 		FB7257222AECFEA400BADCFE /* MockLoggedInUserDefaultsCommander.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7257212AECFEA400BADCFE /* MockLoggedInUserDefaultsCommander.swift */; };
 		FB7257242AED056400BADCFE /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7257232AED056400BADCFE /* MockAPIClient.swift */; };
+		FB7257262AED08C400BADCFE /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7257252AED08C400BADCFE /* APIClientTests.swift */; };
+		FB7257282AEE965500BADCFE /* PostLoginRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7257272AEE965500BADCFE /* PostLoginRequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		FB72571F2AECF51700BADCFE /* MockPostLoginAPICommander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostLoginAPICommander.swift; sourceTree = "<group>"; };
 		FB7257212AECFEA400BADCFE /* MockLoggedInUserDefaultsCommander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoggedInUserDefaultsCommander.swift; sourceTree = "<group>"; };
 		FB7257232AED056400BADCFE /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		FB7257252AED08C400BADCFE /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		FB7257272AEE965500BADCFE /* PostLoginRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginRequestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,7 +272,9 @@
 		FB7256F42AECAFE600BADCFE /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FB7257252AED08C400BADCFE /* APIClientTests.swift */,
 				FB7256FA2AECB1A400BADCFE /* PostLoginAPICommanderTests.swift */,
+				FB7257272AEE965500BADCFE /* PostLoginRequestTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -497,12 +503,14 @@
 				FB72571D2AECE1C500BADCFE /* NameProcessMemoryCommanderTests.swift in Sources */,
 				FB7257192AECDFCF00BADCFE /* LoginViewStateMachineTests.swift in Sources */,
 				FB7256F92AECB02D00BADCFE /* PasswordValueCheckerTests.swift in Sources */,
+				FB7257262AED08C400BADCFE /* APIClientTests.swift in Sources */,
 				FB7256F62AECB00F00BADCFE /* NameValueCheckerTests.swift in Sources */,
 				FB72571B2AECE1B000BADCFE /* LoggedInUserDefaultsCommanderTests.swift in Sources */,
 				FB7257222AECFEA400BADCFE /* MockLoggedInUserDefaultsCommander.swift in Sources */,
 				FB7257202AECF51700BADCFE /* MockPostLoginAPICommander.swift in Sources */,
 				FB7256FB2AECB1A400BADCFE /* PostLoginAPICommanderTests.swift in Sources */,
 				FB7257242AED056400BADCFE /* MockAPIClient.swift in Sources */,
+				FB7257282AEE965500BADCFE /* PostLoginRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

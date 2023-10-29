@@ -18,6 +18,13 @@ struct PostLoginRequest: APIRequestProtocol {
     var requestBodies: [String : Any]?
     var queryStrings: [String : String]?
     var httpHeaderFields: [String : String]?
+    
+    init(name: String, password: String) {
+        self.requestBodies = [
+            "name" : name,
+            "password" : password
+        ]
+    }
 }
 
 struct PostLoginAPICommander: PostLoginAPICommandable {
@@ -29,10 +36,7 @@ struct PostLoginAPICommander: PostLoginAPICommandable {
     
     func command(name: String, password: String) async -> PostLoginAPIResponse {
         do {
-            let request = PostLoginRequest(requestBodies: [
-                "name" : name,
-                "password" : password
-            ])
+            let request = PostLoginRequest(name: name, password: password)
             let result = try await self.client.command(request)
             return result
         } catch {

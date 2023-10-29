@@ -11,7 +11,8 @@ import XCTest
 final class PostLoginAPICommanderTests: XCTestCase {
     func testCommandForSuccess() async {
         let dummyResult = PostLoginAPIResponse(success: true)
-        let postLoginAPICommander = PostLoginAPICommander(client: MockAPIClient<PostLoginRequest>(dummyResult: dummyResult))
+        let mock = MockAPIClient<PostLoginRequest>(dummyResult: dummyResult)
+        let postLoginAPICommander = PostLoginAPICommander(client: mock)
         let result = await postLoginAPICommander.command(name: "name", password: "password")
         XCTAssertEqual(result.success, true)
     }
