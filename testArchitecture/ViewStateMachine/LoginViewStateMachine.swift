@@ -14,7 +14,7 @@ struct LoginViewStateParameters: Equatable {
 }
 
 enum LoginViewState: Equatable {
-    case None
+    case Initial
     case Inputting(parameters: LoginViewStateParameters)
     case Prepared(parameters: LoginViewStateParameters)
     case UnreasonableValue(parameters: LoginViewStateParameters)
@@ -50,11 +50,11 @@ class LoginViewStateMachine: ObservableObject, LoginViewStateMachineable {
     let postLoginAPICommander: PostLoginAPICommandable
     let loggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable
     
-    @Published private var _state: LoginViewState = .None
+    @Published private var _state: LoginViewState = .Initial
     private var cancellables = Set<AnyCancellable>()
     private var currentStatesParameters: LoginViewStateParameters {
         switch _state {
-        case .None: return .init()
+        case .Initial: return .init()
         case .Inputting(let parameters): return parameters
         case .Prepared(let parameters): return parameters
         case .UnreasonableValue(let parameters): return parameters
@@ -73,10 +73,6 @@ class LoginViewStateMachine: ObservableObject, LoginViewStateMachineable {
         self.postLoginAPICommander = postLoginAPICommander
         self.loggedInUserDefaultsCommander = loggedInUserDefaultsCommander
         
-        self.observeAction()
-    }
-    
-    private func observeAction() {
         self.action
             .sink { action in
                 switch action {

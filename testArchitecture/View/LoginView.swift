@@ -43,7 +43,7 @@ struct LoginView: View {
         .padding()
         .onChange(of: self.loginViewStateMachine.state) { _, newValue in
             switch newValue {
-            case .None:
+            case .Initial:
                 self.buttonDisabled = true
             case .Inputting:
                 self.buttonDisabled = true

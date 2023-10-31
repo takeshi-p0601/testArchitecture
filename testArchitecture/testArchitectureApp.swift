@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct testArchitectureApp: App {
+    @State private var rootViewChangeNotifier = RootViewChangeNotifier.shared
+    
     var body: some Scene {
         WindowGroup {
-            EntryPointView(loginViewBuilder: LoginViewBuilder())
+            switch rootViewChangeNotifier.rootViewType {
+            case .entryPointView:
+                EnryPointViewBuilder().build()
+            case .loginView:
+                LoginViewBuilder().build()
+            case .mainView:
+                MainView()
+            }
         }
     }
 }

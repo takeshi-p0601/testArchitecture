@@ -8,31 +8,16 @@
 import SwiftUI
 
 struct EntryPointView: View {
-    let loginViewBuilder: LoginViewBuilder
-    
-    @State private var isPresented: Bool = false
+    @StateObject var entryPointViewStateMachine: EntryPointViewStateMachine
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            
-            Button("LoginへGo") {
-                isPresented.toggle()
+        EmptyView()
+            .onAppear {
+                self.entryPointViewStateMachine.action.send(.onAppear)
             }
-            .fullScreenCover(isPresented: $isPresented, content: {
-                loginViewBuilder.build()
-            })
-//            .sheet(isPresented: $isPresented, content: {
-//                loginViewBuilder.build()
-//            })
-        }
-        .padding()
     }
 }
 
-#Preview {
-    EntryPointView(loginViewBuilder: LoginViewBuilder())
-}
+//#Preview {
+//    EntryPointView()
+//}
