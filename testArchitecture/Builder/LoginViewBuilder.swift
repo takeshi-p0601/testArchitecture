@@ -14,7 +14,8 @@ struct LoginViewBuilder {
         let stateMachine = LoginViewStateMachine(nameValueChecker: nameValueChecker,
                                                  passwordValueChecker: passwordValueChecker,
                                                  postLoginAPICommander: postLoginAPICommander,
-                                                 loggedInUserDefaultsCommander: loggedInUserDefaultsCommander)
+                                                 loggedInUserDefaultsCommander: loggedInUserDefaultsCommander,
+                                                 rootViewChangeNotifier: RootViewChangeNotifier.shared)
         return LoginView(loginViewStateMachine: stateMachine)
     }
 }

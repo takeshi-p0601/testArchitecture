@@ -11,13 +11,13 @@ struct EntryPointView: View {
     @StateObject var entryPointViewStateMachine: EntryPointViewStateMachine
     
     var body: some View {
-        EmptyView()
+        VStack {}
             .onAppear {
                 self.entryPointViewStateMachine.action.send(.onAppear)
             }
     }
 }
 
-//#Preview {
-//    EntryPointView()
-//}
+#Preview {
+    EnryPointViewBuilder().build()
+}

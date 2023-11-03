@@ -42,7 +42,7 @@
 		FB87D3BC2AF079CE00C73F1F /* EnryPointViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87D3BB2AF079CE00C73F1F /* EnryPointViewBuilder.swift */; };
 		FB87D3BF2AF079EF00C73F1F /* EntryPointViewStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87D3BE2AF079EF00C73F1F /* EntryPointViewStateMachine.swift */; };
 		FB87D3C12AF07FF000C73F1F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87D3C02AF07FF000C73F1F /* MainView.swift */; };
-		FB87D3C42AF083D200C73F1F /* RootViewChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87D3C32AF083D200C73F1F /* RootViewChanger.swift */; };
+		FB87D3C42AF083D200C73F1F /* RootViewChangeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87D3C32AF083D200C73F1F /* RootViewChangeNotifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +101,7 @@
 		FB87D3BB2AF079CE00C73F1F /* EnryPointViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnryPointViewBuilder.swift; sourceTree = "<group>"; };
 		FB87D3BE2AF079EF00C73F1F /* EntryPointViewStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointViewStateMachine.swift; sourceTree = "<group>"; };
 		FB87D3C02AF07FF000C73F1F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		FB87D3C32AF083D200C73F1F /* RootViewChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewChanger.swift; sourceTree = "<group>"; };
+		FB87D3C32AF083D200C73F1F /* RootViewChangeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewChangeNotifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,7 +361,7 @@
 		FB87D3C22AF083C600C73F1F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				FB87D3C32AF083D200C73F1F /* RootViewChanger.swift */,
+				FB87D3C32AF083D200C73F1F /* RootViewChangeNotifier.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -515,7 +515,7 @@
 				FB87D3BF2AF079EF00C73F1F /* EntryPointViewStateMachine.swift in Sources */,
 				FB7256B02AEC9E6000BADCFE /* testArchitectureApp.swift in Sources */,
 				FB7256E72AEC9FA400BADCFE /* APIClient.swift in Sources */,
-				FB87D3C42AF083D200C73F1F /* RootViewChanger.swift in Sources */,
+				FB87D3C42AF083D200C73F1F /* RootViewChangeNotifier.swift in Sources */,
 				FB7257122AECC99F00BADCFE /* LoggedInUserDefaultsCommander.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

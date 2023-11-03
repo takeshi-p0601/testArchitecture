@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct testArchitectureApp: App {
-    @State private var rootViewChangeNotifier = RootViewChangeNotifier.shared
+    @StateObject private var rootViewChangeNotifier = RootViewChangeNotifier.shared
     
     var body: some Scene {
         WindowGroup {

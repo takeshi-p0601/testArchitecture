@@ -63,5 +63,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(loginViewStateMachine: LoginViewStateMachine(nameValueChecker: NameValueChecker(), passwordValueChecker: PasswordValueChecker(), postLoginAPICommander: PostLoginAPICommander(client: APIClient()), loggedInUserDefaultsCommander: LoggedInUserDefaultsCommander(client: UserDefaultsClient())))
+    LoginViewBuilder().build()
 }
