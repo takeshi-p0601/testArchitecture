@@ -9,8 +9,13 @@ import Foundation
 import Combine
 
 struct LoginViewStateParameters: Equatable {
-    var name: String = ""
-    var password: String = ""
+    let name: String
+    let password: String
+    
+    init(name: String = "", password: String = "") {
+        self.name = name
+        self.password = password
+    }
 }
 
 enum LoginViewState: Equatable {
@@ -51,7 +56,6 @@ class LoginViewStateMachine: ObservableObject, LoginViewStateMachineable {
     let passwordValueChecker: PasswordValueCheckable
     let postLoginAPICommander: PostLoginAPICommandable
     let loggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable
-    // TODO: viewに持たせるか検討
     let rootViewChangeNotifier: RootViewChangeNotifier
     
     @Published private var _state: LoginViewState = .Initial
@@ -99,15 +103,13 @@ class LoginViewStateMachine: ObservableObject, LoginViewStateMachineable {
                     }
                     
                 case .inputName(let name):
-                    var newParameters = self.currentStatesParameters
-                    newParameters.name = name
+                    let newParameters = LoginViewStateParameters(name: name,
+                                                                 password: self.currentStatesParameters.password)
                     self._state = .Inputting(parameters: newParameters)
-                    
                 case .inputPassword(let password):
-                    var newParameters = self.currentStatesParameters
-                    newParameters.password = password
+                    let newParameters = LoginViewStateParameters(name: self.currentStatesParameters.name,
+                                                                 password: password)
                     self._state = .Inputting(parameters: newParameters)
-                    
                 case .dismissKeyboard:
                     if case .Inputting(let parameters) = self._state {
                         let nameValidateResult = self.nameValueChecker.check(name: parameters.name)

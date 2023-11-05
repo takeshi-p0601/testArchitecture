@@ -19,7 +19,7 @@ struct testArchitectureApp: App {
             case .loginView:
                 LoginViewBuilder().build()
             case .mainView:
-                MainView()
+                MainViewBuilder().build()
             }
         }
     }

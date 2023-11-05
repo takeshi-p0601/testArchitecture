@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FB7256B02AEC9E6000BADCFE /* testArchitectureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7256AF2AEC9E6000BADCFE /* testArchitectureApp.swift */; };
-		FB7256B22AEC9E6000BADCFE /* EntryPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7256B12AEC9E6000BADCFE /* EntryPointView.swift */; };
 		FB7256B42AEC9E6400BADCFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7256B32AEC9E6400BADCFE /* Assets.xcassets */; };
 		FB7256B72AEC9E6400BADCFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7256B62AEC9E6400BADCFE /* Preview Assets.xcassets */; };
 		FB7256CB2AEC9E6400BADCFE /* testArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7256CA2AEC9E6400BADCFE /* testArchitectureUITests.swift */; };
 		FB7256CD2AEC9E6400BADCFE /* testArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7256CC2AEC9E6400BADCFE /* testArchitectureUITestsLaunchTests.swift */; };
-		FB7256DA2AEC9EE100BADCFE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7256D92AEC9EE100BADCFE /* LoginView.swift */; };
 		FB7256DD2AEC9F0100BADCFE /* LoginViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7256DC2AEC9F0100BADCFE /* LoginViewBuilder.swift */; };
 		FB7256E22AEC9F5900BADCFE /* NameValueChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7256E12AEC9F5900BADCFE /* NameValueChecker.swift */; };
 		FB7256E72AEC9FA400BADCFE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7256E62AEC9FA400BADCFE /* APIClient.swift */; };
@@ -41,8 +39,15 @@
 		FB7257282AEE965500BADCFE /* PostLoginRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7257272AEE965500BADCFE /* PostLoginRequestTests.swift */; };
 		FB87D3BC2AF079CE00C73F1F /* EnryPointViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87D3BB2AF079CE00C73F1F /* EnryPointViewBuilder.swift */; };
 		FB87D3BF2AF079EF00C73F1F /* EntryPointViewStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87D3BE2AF079EF00C73F1F /* EntryPointViewStateMachine.swift */; };
-		FB87D3C12AF07FF000C73F1F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87D3C02AF07FF000C73F1F /* MainView.swift */; };
 		FB87D3C42AF083D200C73F1F /* RootViewChangeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87D3C32AF083D200C73F1F /* RootViewChangeNotifier.swift */; };
+		FBFC1EAF2AF4F8CD00B2636E /* MainViewStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC1EAE2AF4F8CD00B2636E /* MainViewStateMachine.swift */; };
+		FBFC1EB12AF5A1A900B2636E /* MainViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC1EB02AF5A1A900B2636E /* MainViewBuilder.swift */; };
+		FBFC1EC22AF5AB9F00B2636E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC1EBF2AF5AB9F00B2636E /* LoginView.swift */; };
+		FBFC1EC32AF5AB9F00B2636E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC1EC02AF5AB9F00B2636E /* MainView.swift */; };
+		FBFC1EC42AF5AB9F00B2636E /* EntryPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC1EC12AF5AB9F00B2636E /* EntryPointView.swift */; };
+		FBFC1ECE2AF7C13B00B2636E /* MainViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC1ECD2AF7C13B00B2636E /* MainViewRouter.swift */; };
+		FBFC1ED02AF7C23300B2636E /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC1ECF2AF7C23300B2636E /* SettingView.swift */; };
+		FBFC1ED22AF7DA4700B2636E /* HogeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC1ED12AF7DA4700B2636E /* HogeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,14 +70,12 @@
 /* Begin PBXFileReference section */
 		FB7256AC2AEC9E6000BADCFE /* testArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7256AF2AEC9E6000BADCFE /* testArchitectureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testArchitectureApp.swift; sourceTree = "<group>"; };
-		FB7256B12AEC9E6000BADCFE /* EntryPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointView.swift; sourceTree = "<group>"; };
 		FB7256B32AEC9E6400BADCFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7256B62AEC9E6400BADCFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB7256BC2AEC9E6400BADCFE /* testArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7256C62AEC9E6400BADCFE /* testArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7256CA2AEC9E6400BADCFE /* testArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testArchitectureUITests.swift; sourceTree = "<group>"; };
 		FB7256CC2AEC9E6400BADCFE /* testArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FB7256D92AEC9EE100BADCFE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FB7256DC2AEC9F0100BADCFE /* LoginViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewBuilder.swift; sourceTree = "<group>"; };
 		FB7256E12AEC9F5900BADCFE /* NameValueChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValueChecker.swift; sourceTree = "<group>"; };
 		FB7256E62AEC9FA400BADCFE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -100,8 +103,15 @@
 		FB7257272AEE965500BADCFE /* PostLoginRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginRequestTests.swift; sourceTree = "<group>"; };
 		FB87D3BB2AF079CE00C73F1F /* EnryPointViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnryPointViewBuilder.swift; sourceTree = "<group>"; };
 		FB87D3BE2AF079EF00C73F1F /* EntryPointViewStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointViewStateMachine.swift; sourceTree = "<group>"; };
-		FB87D3C02AF07FF000C73F1F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FB87D3C32AF083D200C73F1F /* RootViewChangeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewChangeNotifier.swift; sourceTree = "<group>"; };
+		FBFC1EAE2AF4F8CD00B2636E /* MainViewStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewStateMachine.swift; sourceTree = "<group>"; };
+		FBFC1EB02AF5A1A900B2636E /* MainViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewBuilder.swift; sourceTree = "<group>"; };
+		FBFC1EBF2AF5AB9F00B2636E /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FBFC1EC02AF5AB9F00B2636E /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FBFC1EC12AF5AB9F00B2636E /* EntryPointView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryPointView.swift; sourceTree = "<group>"; };
+		FBFC1ECD2AF7C13B00B2636E /* MainViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRouter.swift; sourceTree = "<group>"; };
+		FBFC1ECF2AF7C23300B2636E /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		FBFC1ED12AF7DA4700B2636E /* HogeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HogeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				FB7256AF2AEC9E6000BADCFE /* testArchitectureApp.swift */,
-				FB7257152AECDE7500BADCFE /* View */,
+				FBFC1EBE2AF5AB9700B2636E /* View */,
+				FBFC1ECC2AF7C12600B2636E /* Router */,
 				FB87D3C22AF083C600C73F1F /* App */,
 				FB7256DE2AEC9F0D00BADCFE /* ViewStateMachine */,
 				FB7256DB2AEC9EF100BADCFE /* Builder */,
@@ -198,6 +209,7 @@
 			children = (
 				FB7256DC2AEC9F0100BADCFE /* LoginViewBuilder.swift */,
 				FB87D3BB2AF079CE00C73F1F /* EnryPointViewBuilder.swift */,
+				FBFC1EB02AF5A1A900B2636E /* MainViewBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -207,6 +219,7 @@
 			children = (
 				FB87D3BE2AF079EF00C73F1F /* EntryPointViewStateMachine.swift */,
 				FB7256EE2AECA25500BADCFE /* LoginViewStateMachine.swift */,
+				FBFC1EAE2AF4F8CD00B2636E /* MainViewStateMachine.swift */,
 			);
 			path = ViewStateMachine;
 			sourceTree = "<group>";
@@ -338,16 +351,6 @@
 			path = ProcessMemory;
 			sourceTree = "<group>";
 		};
-		FB7257152AECDE7500BADCFE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FB7256B12AEC9E6000BADCFE /* EntryPointView.swift */,
-				FB7256D92AEC9EE100BADCFE /* LoginView.swift */,
-				FB87D3C02AF07FF000C73F1F /* MainView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		FB72571E2AECF50500BADCFE /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +367,26 @@
 				FB87D3C32AF083D200C73F1F /* RootViewChangeNotifier.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		FBFC1EBE2AF5AB9700B2636E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBFC1EC12AF5AB9F00B2636E /* EntryPointView.swift */,
+				FBFC1EBF2AF5AB9F00B2636E /* LoginView.swift */,
+				FBFC1EC02AF5AB9F00B2636E /* MainView.swift */,
+				FBFC1ECF2AF7C23300B2636E /* SettingView.swift */,
+				FBFC1ED12AF7DA4700B2636E /* HogeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBFC1ECC2AF7C12600B2636E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FBFC1ECD2AF7C13B00B2636E /* MainViewRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,24 +522,29 @@
 				FB7256DD2AEC9F0100BADCFE /* LoginViewBuilder.swift in Sources */,
 				FB7256E92AEC9FB000BADCFE /* PostLoginAPICommander.swift in Sources */,
 				FB7256F12AECA6EB00BADCFE /* PasswordValueChecker.swift in Sources */,
+				FBFC1ED22AF7DA4700B2636E /* HogeView.swift in Sources */,
 				FB7257022AECB3D800BADCFE /* ProcessMemoryClient.swift in Sources */,
 				FB72570D2AECB5A500BADCFE /* NameProcessMemoryCommander.swift in Sources */,
-				FB87D3C12AF07FF000C73F1F /* MainView.swift in Sources */,
 				FB7257092AECB4FA00BADCFE /* AccessTokenKeychainCommander.swift in Sources */,
+				FBFC1ED02AF7C23300B2636E /* SettingView.swift in Sources */,
 				FB7256EF2AECA25500BADCFE /* LoginViewStateMachine.swift in Sources */,
+				FBFC1EC32AF5AB9F00B2636E /* MainView.swift in Sources */,
 				FB7256FD2AECB1BF00BADCFE /* PostLoginAPIResponse.swift in Sources */,
 				FB7256E22AEC9F5900BADCFE /* NameValueChecker.swift in Sources */,
-				FB7256DA2AEC9EE100BADCFE /* LoginView.swift in Sources */,
-				FB7256B22AEC9E6000BADCFE /* EntryPointView.swift in Sources */,
+				FBFC1EB12AF5A1A900B2636E /* MainViewBuilder.swift in Sources */,
 				FB7256ED2AECA23100BADCFE /* NameUserDefaultsCommander.swift in Sources */,
+				FBFC1EC42AF5AB9F00B2636E /* EntryPointView.swift in Sources */,
 				FB7257042AECB3FC00BADCFE /* KeychainClient.swift in Sources */,
 				FB87D3BC2AF079CE00C73F1F /* EnryPointViewBuilder.swift in Sources */,
 				FB7256EB2AEC9FF900BADCFE /* UserDefaultsClient.swift in Sources */,
+				FBFC1ECE2AF7C13B00B2636E /* MainViewRouter.swift in Sources */,
 				FB87D3BF2AF079EF00C73F1F /* EntryPointViewStateMachine.swift in Sources */,
+				FBFC1EC22AF5AB9F00B2636E /* LoginView.swift in Sources */,
 				FB7256B02AEC9E6000BADCFE /* testArchitectureApp.swift in Sources */,
 				FB7256E72AEC9FA400BADCFE /* APIClient.swift in Sources */,
 				FB87D3C42AF083D200C73F1F /* RootViewChangeNotifier.swift in Sources */,
 				FB7257122AECC99F00BADCFE /* LoggedInUserDefaultsCommander.swift in Sources */,
+				FBFC1EAF2AF4F8CD00B2636E /* MainViewStateMachine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
