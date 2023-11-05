@@ -10,6 +10,7 @@ statemachine image
 
 <img width="575" alt="スクリーンショット 2023-10-28 15 45 23" src="https://github.com/takeshi-p0601/testArchitecture/assets/106786317/0c292b6b-f55e-4b70-8be0-fd31ea133781">
 
-whole image
+overall concept which shows dependencies between some modules
 
-<img width="326" alt="スクリーンショット 2023-10-28 15 46 30" src="https://github.com/takeshi-p0601/testArchitecture/assets/106786317/d22c0404-65f6-449b-891f-edd86befa13d">
+<img width="646" alt="スクリーンショット 2023-11-05 10 05 16" src="https://github.com/takeshi-p0601/testArchitecture/assets/106786317/d0152aba-bcbf-4aa5-8674-e4e252ba88d7">
+
