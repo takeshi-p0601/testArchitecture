@@ -9,17 +9,18 @@ import SwiftUI
 
 @main
 struct testArchitectureApp: App {
-    @StateObject private var rootViewChangeNotifier = RootViewChangeNotifier.shared
+    @StateObject private var rootViewChanger = RootViewChanger.shared
     
     var body: some Scene {
         WindowGroup {
-            switch rootViewChangeNotifier.rootViewType {
-            case .entryPointView:
-                EnryPointViewBuilder().build()
-            case .loginView:
-                LoginViewBuilder().build()
-            case .mainView:
-                MainViewBuilder().build()
+            if let rootViewType = rootViewChanger.rootViewType {
+                switch rootViewType {
+                case .loginView(let loginView): loginView
+                case .mainView(let mainView): mainView
+                }
+            } else {
+                // EntryPointViewのみ、Appから直接生成するとする
+                EntryPointViewBuilder().build()
             }
         }
     }

@@ -17,7 +17,8 @@ final class LoginViewStateMachineTests: XCTestCase {
             let loginViewStateMachine = LoginViewStateMachine(nameValueChecker: NameValueChecker(),
                                                               passwordValueChecker: PasswordValueChecker(),
                                                               postLoginAPICommander: mockPostLoginAPICommander,
-                                                              loggedInUserDefaultsCommander: mockLoggedInUserDefaultsCommander)
+                                                              loggedInUserDefaultsCommander: mockLoggedInUserDefaultsCommander, 
+                                                              rootViewChanger: RootViewChanger.shared)
             let dummyStateParameters = LoginViewStateParameters(name: "1234567890", password: "password12")
             // 妥当チェック済みの名前を入力"
             loginViewStateMachine.action.send(.inputName(name: dummyStateParameters.name))
@@ -43,7 +44,8 @@ final class LoginViewStateMachineTests: XCTestCase {
             let loginViewStateMachine = LoginViewStateMachine(nameValueChecker: NameValueChecker(),
                                                               passwordValueChecker: PasswordValueChecker(),
                                                               postLoginAPICommander: mockPostLoginAPICommander,
-                                                              loggedInUserDefaultsCommander: mockLoggedInUserDefaultsCommander)
+                                                              loggedInUserDefaultsCommander: mockLoggedInUserDefaultsCommander, 
+                                                              rootViewChanger: RootViewChanger.shared)
             let dummyStateParameters = LoginViewStateParameters(name: "0123456789", password: "password21")
             // 妥当チェック済みの名前を入力"
             loginViewStateMachine.action.send(.inputName(name: dummyStateParameters.name))

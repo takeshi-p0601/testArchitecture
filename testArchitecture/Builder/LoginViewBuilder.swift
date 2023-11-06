@@ -15,7 +15,7 @@ struct LoginViewBuilder {
                                                  passwordValueChecker: passwordValueChecker,
                                                  postLoginAPICommander: postLoginAPICommander,
                                                  loggedInUserDefaultsCommander: loggedInUserDefaultsCommander,
-                                                 rootViewChangeNotifier: RootViewChangeNotifier.shared)
+                                                 rootViewChanger: RootViewChanger.shared)
         return LoginView(loginViewStateMachine: stateMachine)
     }
 }

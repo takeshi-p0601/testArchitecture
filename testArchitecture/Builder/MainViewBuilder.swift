@@ -8,8 +8,8 @@
 struct MainViewBuilder {
     @MainActor func build() -> MainView {
         let mainViewRouter = MainViewRouter()
-        let rootViewChangeNotifier = RootViewChangeNotifier.shared
-        let mainViewStateMachine = MainViewStateMachine(rootViewChangeNotifier: rootViewChangeNotifier,
+        let rootViewChanger = RootViewChanger.shared
+        let mainViewStateMachine = MainViewStateMachine(rootViewChanger: rootViewChanger,
                                                         mainViewRouter: mainViewRouter)
         return MainView(mainViewStateMachine: mainViewStateMachine, mainViewRouter: mainViewRouter)
     }

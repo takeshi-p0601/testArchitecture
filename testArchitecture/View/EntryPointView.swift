@@ -19,5 +19,5 @@ struct EntryPointView: View {
 }
 
 #Preview {
-    EnryPointViewBuilder().build()
+    EntryPointViewBuilder().build()
 }

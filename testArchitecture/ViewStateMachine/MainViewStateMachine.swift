@@ -32,7 +32,7 @@ protocol MainViewStateMachineable: ObservableObject {
     // corelogic actor
     // gateway commander
     // app
-    var rootViewChangeNotifier: RootViewChangeNotifier { get }
+    var rootViewChanger: RootViewChanger { get }
     // router
     var mainViewRouter: MainViewRouter { get }
 }
@@ -40,15 +40,15 @@ protocol MainViewStateMachineable: ObservableObject {
 class MainViewStateMachine: ObservableObject, MainViewStateMachineable {
     var state: MainViewState { self._state }
     let action = PassthroughSubject<MainViewAction, Never>()
-    let rootViewChangeNotifier: RootViewChangeNotifier
+    let rootViewChanger: RootViewChanger
     let mainViewRouter: MainViewRouter
     
     @Published private var _state: MainViewState = .Initial
     private var cancellables = Set<AnyCancellable>()
     
-    init(rootViewChangeNotifier: RootViewChangeNotifier,
+    init(rootViewChanger: RootViewChanger,
          mainViewRouter: MainViewRouter) {
-        self.rootViewChangeNotifier = rootViewChangeNotifier
+        self.rootViewChanger = rootViewChanger
         self.mainViewRouter = mainViewRouter
         
         self.action

@@ -28,26 +28,26 @@ class EntryPointViewStateMachine: ObservableObject, EntryPointViewStateMachineab
     let action = PassthroughSubject<EntryPointViewAction, Never>()
     
     let loggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable
-    let rootViewChangeNotifier: RootViewChangeNotifier
+    let rootViewChanger: RootViewChanger
     
     @Published private var _state: EntryPointViewState = .Initial
     private var cancellables = Set<AnyCancellable>()
     
     init(loggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable,
-         rootViewChangeNotifier: RootViewChangeNotifier) {
+         rootViewChanger: RootViewChanger) {
         self.loggedInUserDefaultsCommander = loggedInUserDefaultsCommander
-        self.rootViewChangeNotifier = rootViewChangeNotifier
+        self.rootViewChanger = rootViewChanger
         
         self.action
             .sink { action in
                 switch action {
                 case .onAppear:
                     if let loggedIn = loggedInUserDefaultsCommander.getCommand() {
-                        self.rootViewChangeNotifier
+                        self.rootViewChanger
                             .action
                             .send(.splashAppeared(loggedIn: loggedIn))
                     } else {
-                        self.rootViewChangeNotifier
+                        self.rootViewChanger
                             .action
                             .send(.splashAppeared(loggedIn: false))
                     }

@@ -46,7 +46,7 @@ protocol LoginViewStateMachineable: ObservableObject {
     var postLoginAPICommander: PostLoginAPICommandable { get }
     var loggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable { get }
     // app
-    var rootViewChangeNotifier: RootViewChangeNotifier { get }
+    var rootViewChanger: RootViewChanger { get }
 }
 
 class LoginViewStateMachine: ObservableObject, LoginViewStateMachineable {
@@ -56,7 +56,7 @@ class LoginViewStateMachine: ObservableObject, LoginViewStateMachineable {
     let passwordValueChecker: PasswordValueCheckable
     let postLoginAPICommander: PostLoginAPICommandable
     let loggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable
-    let rootViewChangeNotifier: RootViewChangeNotifier
+    let rootViewChanger: RootViewChanger
     
     @Published private var _state: LoginViewState = .Initial
     private var cancellables = Set<AnyCancellable>()
@@ -76,12 +76,12 @@ class LoginViewStateMachine: ObservableObject, LoginViewStateMachineable {
          passwordValueChecker: PasswordValueChecker,
          postLoginAPICommander: PostLoginAPICommandable,
          loggedInUserDefaultsCommander: LoggedInUserDefaultsCommandable,
-         rootViewChangeNotifier: RootViewChangeNotifier) {
+         rootViewChanger: RootViewChanger) {
         self.nameValueChecker = nameValueChecker
         self.passwordValueChecker = passwordValueChecker
         self.postLoginAPICommander = postLoginAPICommander
         self.loggedInUserDefaultsCommander = loggedInUserDefaultsCommander
-        self.rootViewChangeNotifier = rootViewChangeNotifier
+        self.rootViewChanger = rootViewChanger
         
         self.action
             .sink { action in

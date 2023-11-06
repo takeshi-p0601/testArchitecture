@@ -34,13 +34,13 @@ struct MainView: View {
                 get: { self.mainViewRouter.settingView.activated },
                 set: { _ in }
             ), destination: {
-                self.mainViewRouter.settingView.viewItself
+                self.mainViewRouter.settingView.itself
             })
             .fullScreenCover(isPresented: Binding(
                 get: { self.mainViewRouter.hogeView.activated },
                 set: { _ in }
             )) {
-                self.mainViewRouter.hogeView.viewItself
+                self.mainViewRouter.hogeView.itself
             }
         }
     }
