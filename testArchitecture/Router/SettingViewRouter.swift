@@ -17,7 +17,6 @@ protocol SettingViewRouterable {
 }
 
 class SettingViewRouter: ObservableObject, SettingViewRouterable {
-    // hogeView
     @Published var isFugaAlertPresented: Bool = false
     var presentedFugaAlert: Alert { self._presentedFugaAlert }
     private var _presentedFugaAlert: Alert = .init(title: Text(""))
