@@ -6,30 +6,36 @@
 //
 
 import Foundation
+import SwiftUI
 
+@MainActor
 protocol MainViewRouterable {
     // settingView
-    var settingView: (activated: Bool, itself: SettingView?) { get }
+    var isSettingViewActivated: Bool { get }
+    var activatedSettingView: SettingView? { get }
     func activateSettingView()
     // hogeView
-    var hogeView: (activated: Bool, itself: HogeView?) { get }
+    var isHogeViewActivated: Bool { get }
+    var activatedHogeView: HogeView? { get }
     func activateHogeView()
 }
 
 class MainViewRouter: ObservableObject, MainViewRouterable {
-    var settingView: (activated: Bool, itself: SettingView?) { self._settingView }
-    @Published private var _settingView: (activated: Bool, itself: SettingView?) = (activated: false, itself: nil)
+    @Published var isSettingViewActivated: Bool = false
+    var activatedSettingView: SettingView? { self._activatedSettingView }
+    private var _activatedSettingView: SettingView? = nil
     
-    var hogeView: (activated: Bool, itself: HogeView?) { self._hogeView }
-    @Published private var _hogeView: (activated: Bool, itself: HogeView?) = (activated: false, itself: nil)
+    @Published var isHogeViewActivated: Bool = false
+    var activatedHogeView: HogeView? { self._activatedHogeView }
+    private var _activatedHogeView: HogeView? = nil
     
     func activateSettingView() {
-        // TODO: BuilderからViewを作成して入れ込む
-        self._settingView = (activated: true, itself: SettingView())
+        self._activatedSettingView = SettingViewBuilder().build()
+        self.isSettingViewActivated = true
     }
     
     func activateHogeView() {
-        // TODO: BuilderからViewを作成して入れ込む
-        self._hogeView = (activated: true, itself: HogeView())
+        self._activatedHogeView = HogeViewBuilder().build()
+        self.isHogeViewActivated = true
     }
 }

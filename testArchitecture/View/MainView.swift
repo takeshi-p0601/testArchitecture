@@ -30,18 +30,12 @@ struct MainView: View {
 
             }
             .padding()
-            .navigationDestination(isPresented: Binding(
-                get: { self.mainViewRouter.settingView.activated },
-                set: { _ in }
-            ), destination: {
-                self.mainViewRouter.settingView.itself
+            .navigationDestination(isPresented: self.$mainViewRouter.isSettingViewActivated, destination: {
+                self.mainViewRouter.activatedSettingView
             })
-            .fullScreenCover(isPresented: Binding(
-                get: { self.mainViewRouter.hogeView.activated },
-                set: { _ in }
-            )) {
-                self.mainViewRouter.hogeView.itself
-            }
+        }
+        .fullScreenCover(isPresented: self.$mainViewRouter.isHogeViewActivated) {
+            self.mainViewRouter.activatedHogeView
         }
     }
 }

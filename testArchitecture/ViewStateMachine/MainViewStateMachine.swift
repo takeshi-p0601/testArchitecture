@@ -18,13 +18,6 @@ enum MainViewAction {
     case tapHogeButton
 }
 
-struct MainViewNavigateHogeViewParameters {
-    var shouldNavigate: Bool { self._shouldNavigate }
-    private var _shouldNavigate: Bool = false
-    var name: String { _name }
-    private var _name: String = ""
-}
-
 @MainActor
 protocol MainViewStateMachineable: ObservableObject {
     var state: MainViewState { get }

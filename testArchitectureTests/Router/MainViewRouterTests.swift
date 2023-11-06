@@ -9,29 +9,29 @@ import XCTest
 @testable import testArchitecture
 
 final class MainViewRouterTests: XCTestCase {
-    func testActivateSettingView() {
+    @MainActor func testActivateSettingView() {
         let mainViewRouter = MainViewRouter()
         
         // activateする前
-        XCTAssertEqual(mainViewRouter.settingView.activated, false)
-        XCTAssertNil(mainViewRouter.settingView.itself)
+        XCTAssertEqual(mainViewRouter.isSettingViewActivated, false)
+        XCTAssertNil(mainViewRouter.activatedSettingView)
         
         // activate後
         mainViewRouter.activateSettingView()
-        XCTAssertEqual(mainViewRouter.settingView.activated, true)
-        XCTAssertNotNil(mainViewRouter.settingView.itself)
+        XCTAssertEqual(mainViewRouter.isSettingViewActivated, true)
+        XCTAssertNotNil(mainViewRouter.activatedSettingView)
     }
     
-    func testActivateHogeView() {
+    @MainActor func testActivateHogeView() {
         let mainViewRouter = MainViewRouter()
         
         // activateする前
-        XCTAssertEqual(mainViewRouter.hogeView.activated, false)
-        XCTAssertNil(mainViewRouter.hogeView.itself)
+        XCTAssertEqual(mainViewRouter.isHogeViewActivated, false)
+        XCTAssertNil(mainViewRouter.activatedHogeView)
         
         // activate後
         mainViewRouter.activateHogeView()
-        XCTAssertEqual(mainViewRouter.hogeView.activated, true)
-        XCTAssertNotNil(mainViewRouter.hogeView.itself)
+        XCTAssertEqual(mainViewRouter.isHogeViewActivated, true)
+        XCTAssertNotNil(mainViewRouter.activatedHogeView)
     }
 }

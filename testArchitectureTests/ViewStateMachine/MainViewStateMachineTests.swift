@@ -14,15 +14,15 @@ final class MainViewStateMachineTests: XCTestCase {
         let mainViewStateMachine = MainViewStateMachine(rootViewChanger: RootViewChanger.shared,
                                                         mainViewRouter: mainViewRouter)
         // 遷移イベント発生してないこと確認
-        XCTAssertEqual(mainViewRouter.settingView.activated, false)
-        XCTAssertNil(mainViewRouter.settingView.itself)
+        XCTAssertEqual(mainViewRouter.isSettingViewActivated, false)
+        XCTAssertNil(mainViewRouter.activatedSettingView)
         
         // ボタンタップ
         mainViewStateMachine.action.send(.tapMeButton)
         
         // 遷移イベント発火していること確認
-        XCTAssertEqual(mainViewRouter.settingView.activated, true)
-        XCTAssertNotNil(mainViewRouter.settingView.itself)
+        XCTAssertEqual(mainViewRouter.isSettingViewActivated, true)
+        XCTAssertNotNil(mainViewRouter.activatedSettingView)
     }
     
     @MainActor func testTapHogeButton() {
@@ -30,14 +30,14 @@ final class MainViewStateMachineTests: XCTestCase {
         let mainViewStateMachine = MainViewStateMachine(rootViewChanger: RootViewChanger.shared,
                                                         mainViewRouter: mainViewRouter)
         // 遷移イベント発生してないこと確認
-        XCTAssertEqual(mainViewRouter.hogeView.activated, false)
-        XCTAssertNil(mainViewRouter.hogeView.itself)
+        XCTAssertEqual(mainViewRouter.isHogeViewActivated, false)
+        XCTAssertNil(mainViewRouter.activatedHogeView)
         
         // ボタンタップ
         mainViewStateMachine.action.send(.tapHogeButton)
         
         // 遷移イベント発火していること確認
-        XCTAssertEqual(mainViewRouter.hogeView.activated, true)
-        XCTAssertNotNil(mainViewRouter.hogeView.itself)
+        XCTAssertEqual(mainViewRouter.isHogeViewActivated, true)
+        XCTAssertNotNil(mainViewRouter.activatedHogeView)
     }
 }

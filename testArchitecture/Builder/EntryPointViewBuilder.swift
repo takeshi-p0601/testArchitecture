@@ -1,5 +1,5 @@
 //
-//  EnryPointViewBuilder.swift
+//  EntryPointViewBuilder.swift
 //  testArchitecture
 //
 //  Created by Takeshi Komori on 2023/10/31.
